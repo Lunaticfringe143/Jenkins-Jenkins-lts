@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: jenkins-server
+    env: docker
+    repo: https://github.com/Lunaticfringe143/Risk_Scoring_Engine_v4
+    dockerfilePath: jenkins-setup/Dockerfile
+    plan: free
+    branch: main
