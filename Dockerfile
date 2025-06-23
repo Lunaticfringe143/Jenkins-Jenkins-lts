@@ -1,12 +1,8 @@
-# Dockerfile.jenkins
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins:lts-jdk11
 
 USER root
 
-# Install Python + system dependencies
-RUN apt-get update && \
-    apt-get install -y python3 python3-pip python3-venv git curl
-
-RUN pip3 install --upgrade pip
+# Optional: Install basic tools (if needed)
+RUN apt-get update && apt-get install -y git curl nano
 
 USER jenkins
